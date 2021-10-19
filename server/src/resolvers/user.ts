@@ -27,4 +27,41 @@ export class UserResolver {
     await em.persistAndFlush(newUser)
     return newUser
   }
+
+  @Mutation(() => User, { nullable: true })
+  async updateUsername(
+    @Arg('id', () => Int) id: number,
+    @Arg('userName') userName: string,
+    @Ctx() { em }: MyContext,
+  ): Promise<User | null> {
+    try {
+      const user = await em.findOne(User, { id })
+
+      if (!user) {
+        return null
+      }
+      if (userName) {
+        user.userName = userName
+        await em.persistAndFlush(user)
+      }
+      return user
+    } catch (error) {
+      console.error(error)
+      return null
+    }
+  }
+
+  @Mutation(() => Boolean)
+  async deleteUser(
+    @Arg('id', () => Int) id: number,
+    @Ctx() { em }: MyContext,
+  ): Promise<boolean> {
+    try {
+      await em.nativeDelete(User, { id })
+      return true
+    } catch (error) {
+      console.error(error)
+      return false
+    }
+  }
 }
