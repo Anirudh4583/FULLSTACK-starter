@@ -1,10 +1,10 @@
 import { MikroORM } from '@mikro-orm/core'
 import path from 'path'
 import { DB_PASS, DB_USER, __prod__ } from '../util/constants'
-import { Users } from '../entities/Users'
+import { User } from '../entities/User'
 
 export default {
-  entities: [Users],
+  entities: [User],
   dbName: 'starter',
   type: 'postgresql',
   user: DB_USER,
