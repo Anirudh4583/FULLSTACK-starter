@@ -11,7 +11,7 @@ I named it lol
 - E => Express (to set up server)
 - N => Node (the base)
 - T => Type-Orm (object relation mapper used for db stuff)
-  {currently using Mikro-Orm}
+  {currently using Mikro-Orm, hell might switch to prisma idek}
 
 & Friends...
 
