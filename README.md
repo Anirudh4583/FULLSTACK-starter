@@ -4,7 +4,7 @@
 
 I named it lol
 
-- T => TypeScript (100% ts coz TYPESCRIPT SUPREMACY)
+- T => TypeScript (100% TypeScript coz TYPESCRIPT SUPREMACY)
 - A => Apollo Server (for glueing graphql and backend together)
 - R => React (world's number frontend ~~framework~~ library p)
 - G => GraphQL (query language for improved efficiency and maybe performance)
