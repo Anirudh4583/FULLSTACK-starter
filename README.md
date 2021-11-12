@@ -22,4 +22,4 @@ I named it lol
 
 ## Configure and use this boilerplate for your projects 🚂
 
-Chooo Chooo
+Chooo Chooo be there soon
